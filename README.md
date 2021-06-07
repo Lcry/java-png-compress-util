@@ -22,7 +22,7 @@
 │      │      └─biejieshi
 │      │          └─compress	#测试用例
 │      └─resources				#测试用例图片位置
-└─-
+└─
 ```
 
 ### 压缩效果
@@ -75,9 +75,9 @@
 
 - 编译
 
-Linux下安装java环境， 执行`make java` 
+Linux下安装java环境， 执行 `make java` 
 
-Windows环境下安装MinGW-w64，执行`make java-dll`
+Windows环境下安装MinGW-w64，执行 `make java-dll`
 
-**注意：**mac使用".jnilib"文件，windows使用".dll" 文件，linux使用".so"文件（本项目resources/libimagequant下提供了已经编译好的最新版本，可直接使用）
+**注意：** mac使用".jnilib"文件，windows使用".dll" 文件，linux使用".so"文件（本项目resources/libimagequant下提供了已经编译好的最新版本，可直接使用）
 
