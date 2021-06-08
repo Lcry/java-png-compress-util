@@ -20,7 +20,8 @@ public class PngCompressUtils {
     public static BufferedImage compressPng(BufferedImage bufferedImage) {
         PngQuant pngQuant = new PngQuant();
         //压缩质量质量在 0-100 范围内。如果给定数量的颜色无法达到最低质量，则量化将失败
-        pngQuant.setQuality(60, 85);
+        //如果可能，使用质量 80。如果质量低于 65，则放弃。
+        pngQuant.setQuality(65, 80);
         return Optional.ofNullable(pngQuant.getRemapped(bufferedImage)).orElse(bufferedImage);
     }
 }
