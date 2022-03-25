@@ -100,14 +100,14 @@
 
   2. 根据自己的电脑配置下载mingw-w64，对应地址：https://sourceforge.net/projects/mingw-w64/files/，将解压缩路径中bin配置到电脑的path环境变量中，并将bin目录下面的`mingw32-make.exe` 复制一份改为 `make.exe`。
 
-     >- [x86_64-posix-sjlj](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/sjlj/x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0.7z)
-     >- [x86_64-posix-seh](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z)
-     >- [x86_64-win32-sjlj](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z)
-     >- [x86_64-win32-seh](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-win32/seh/x86_64-8.1.0-release-win32-seh-rt_v6-rev0.7z)
-     >- [i686-posix-sjlj](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-posix/sjlj/i686-8.1.0-release-posix-sjlj-rt_v6-rev0.7z)
-     >- [i686-posix-dwarf](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-posix/dwarf/i686-8.1.0-release-posix-dwarf-rt_v6-rev0.7z)
-     >- [i686-win32-sjlj](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-win32/sjlj/i686-8.1.0-release-win32-sjlj-rt_v6-rev0.7z)
-     >- [i686-win32-dwarf](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-win32/dwarf/i686-8.1.0-release-win32-dwarf-rt_v6-rev0.7z)
+     >- x86_64-posix-sjlj
+     >- x86_64-posix-seh
+     >- x86_64-win32-sjlj
+     >- x86_64-win32-seh
+     >- i686-posix-sjlj
+     >- i686-posix-dwarf
+     >- i686-win32-sjlj
+     >- i686-win32-dwarf
      >
      >电脑系统是 64位的，选择 x86_64；如果是 32位 系统，则选择 i686 即可；
      >
@@ -116,8 +116,6 @@
      >异常处理在开发中非常重要，在开发的过程中，大部分的时间会耗在处理各种异常情况上。seh 是新发明的，而 sjlj 则是古老的。seh 性能比较好，但不支持 32位。 sjlj 稳定性好，支持 32位。建议64位操作系统选择seh。
 
   3. 执行`make java-dll` 即可生成 libimagequant.dll
-
-
 
 **注意：** mac使用".jnilib"文件，windows使用".dll" 文件，linux使用".so"文件（本项目resources/libimagequant下提供了已经编译好的最新稳定版本2.17.0，可直接使用）
 
